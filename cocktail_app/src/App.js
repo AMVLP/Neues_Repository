@@ -9,22 +9,28 @@ import './App.css';
 class App extends React.Component {
   state = {
     cocktails: 
-    [ 
-      {Coctail:"Californication", Zutaten: ["Vodka", "Malibu", "Gin", "Tequila"], Rezept: ["Alle Zutaten in einem Shaker mixen.", "Durch ein Sieb in ein halb mit Eiswüfel gefülltem Sieb schütten."], Beschreibung: "Ein Drink, der richtig reinhaut. Sorgt für tropisches Feeling"},
-      {Coctail:"Mojito", Zutaten: ["Malibu", "Rum"], Rezept: ["Schritt1", "Schritt2"], Beschreibung: "Sehr viel Zucker."},
-      {Coctail:"Sex_on_the_Beach", Zutaten: ["Vodka", "Rum", "Gin"], Rezept: ["Schritt1", "Schritt2"], Beschreibung: "Der Drink, nicht die Tat."},
-      {Coctail:"Martini", Zutaten: ["Vodka, Rum"], Rezept: ["Alles mischen", "Schütteln, nicht rühren"], Beschreibung: "Der Klasiker unter Agenten."},
-      {Coctail:"Caprihana", Zutaten: ["Uso","Tequila", "Rum"], Rezept: ["Mischen", "Nochmal Mischen", "Absturz"], Beschreibung: "Sieht lecker aus"}
+    [
+      {Cocktail:"Cosmopolitan", Zutaten: ["Wodka", "Cranberrysaft", "Limette", "Eiswürfel"], Zubereitung: ["1. Wodka, Cranberrysaft & Eiswürfel in Cocktailshaker schütteln.", "2. Mit Limette verzieren."]},
+      {Cocktail:"Mojito", Zutaten: ["Rum", "Soda", "Limette", "Eiswürfel", "Zucker", "Minze"], Zubereitung: ["1. Limettenstücke achteln und mit Zucker und Minze ins Glas legen.", "2. Mit Eiswürfeln füllen.", "3. Mit Soda und Rum Glas befüllen."]},
+      {Cocktail:"Mai Tai", Zutaten: ["Rum", "Orangensaft",  "Ananassaft", "Limette"], Zubereitung: ["1. Limette auspressen und alles in einem Cocktailshaker schütteln."]},
+      {Cocktail:"Mint Julep", Zutaten: ["Whiskey", "Soda", "Minze", "Eiswürfel", "Zucker"], Zubereitung: ["1. Minze und Zucker gemeinsam zerdrücken.", "2. Glas damit und Eiswürfeln befüllen.", "3. Soda und Whiskey hinzugeben"]},
+      {Cocktail:"Wodka Sunrise", Zutaten: ["Wodka", "Orangensaft", "Eiswürfel"], Zubereitung: ["1. Alle Zutaten in ein Glas geben.", "2. Gut umrühren."]},
     ],
     zutaten : 
     [ 
-      {Zutat:"Test 1", Ausgewählt:false}, 
-      {Zutat:"Test 2", Ausgewählt:false},
-      {Zutat:"Test 3", Ausgewählt:false},
-      {Zutat:"Test 4", Ausgewählt:false},
-      {Zutat:"Test 5", Ausgewählt:false},
+      {Zutat:"Wodka", Ausgewählt:false}, 
+      {Zutat:"Rum", Ausgewählt:false},
+      {Zutat:"Whsikey", Ausgewählt:false},
+      {Zutat:"Eiswürfel", Ausgewählt:false},
+      {Zutat:"Zucker", Ausgewählt:false},
+      {Zutat:"Limette", Ausgewählt:false},
+      {Zutat:"Minze", Ausgewählt:false},
+      {Zutat:"Soda", Ausgewählt:false},
+      {Zutat:"Orangensaft", Ausgewählt:false},
+      {Zutat:"Cranberrysaft", Ausgewählt:false},
+      {Zutat:"Ananassaft", Ausgewählt:false},
       
-    ]
+    ]  
   }
   
 
