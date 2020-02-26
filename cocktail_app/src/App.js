@@ -1,9 +1,8 @@
-// import Components
+
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { navigationszeile } from "./components/Navigations_Zeile/navigationszeile.jsx";
 
-// import css-Files
 import './App.css';
 
 class App extends React.Component {
