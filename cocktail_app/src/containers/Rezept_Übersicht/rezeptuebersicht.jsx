@@ -4,10 +4,10 @@ import {cocktailliste} from "../../components/Cocktailliste/cocktailliste.jsx"
 class Rezeptuebersicht extends React.Component{
     constructor(probs) {
         super(probs)
-        this.state = {cocktails: probs.cocktails}
+        this.state = {Cocktails: probs.Cocktails}
         console.log("Rezeptuebersicht",probs)
         let showEmpty = false
-        this.state.cocktails && this.state.cocktails.length ? this.showEmpty = false : this.showEmpty = true
+        this.state.Cocktails && this.state.Cocktails.length ? this.showEmpty = false : this.showEmpty = true
         this.text = probs.einkaueinkaufsnachricht
         this.textzeigen = probs.textzeigen
         this.prozent = probs.cocktailProzent
@@ -33,7 +33,7 @@ class Rezeptuebersicht extends React.Component{
                     {this.textzeigen ? <div>Für diese Cocktails hast du ..% der Zutaten</div> : null}
                     <br />
                     {this.textzeigen ? this.percentage.map((element) => <div class = "percent"> cocktail: {element[0]} | Prozent: {Number((element[1]).toFixed(2))*100} % </div>) : null}
-                    {cocktailliste(this.state.cocktails)}
+                    {cocktailliste(this.state.Cocktails)}
                 </div>
                 }
             </div>

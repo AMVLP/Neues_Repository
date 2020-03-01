@@ -51,7 +51,7 @@ export function cocktail(probs) {
                     <tr>
                         <td>
                             <h2>
-                                {probs.cocktail}
+                                {probs.Cocktail}
                             </h2>
                         </td>
                     </tr>

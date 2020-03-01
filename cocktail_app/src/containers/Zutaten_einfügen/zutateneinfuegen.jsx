@@ -10,14 +10,14 @@ class Zutateneinfuegen extends React.Component{
         this.state =  {
             zutaten: probs.zutaten, 
             ladeRezeptuebersicht: false, 
-            cocktails: probs.cocktails, 
+            Cocktails: probs.Cocktails, 
             alleEinbeziehen: false,
             } 
         this.aktiv = 0 
         this.backup = {
-            cocktails : probs.cocktails, 
+            Cocktails : probs.Cocktails, 
             einkaueinkaufsnachricht: "Zeige alle cocktails. Für einige wirst du einkaufen müssen!",
-            textzeigen: trues
+            textzeigen: true
             }
         console.log("all probs in zutateneinfuegen", this.state)
     }
@@ -25,8 +25,8 @@ class Zutateneinfuegen extends React.Component{
     zuladenecocktails = () => {
         let cocktailzutaten = []
         let tmpvar = 0
-        this.state.cocktails.forEach((element) => (
-            tmpvar = [element.cocktail, element.Zutaten],
+        this.state.Cocktails.forEach((element) => (
+            tmpvar = [element.Cocktail, element.Zutaten],
             cocktailzutaten.push(tmpvar)
         ));
 
@@ -53,12 +53,12 @@ class Zutateneinfuegen extends React.Component{
 
         let add = 0
         moeglichecocktails.forEach((element) => (
-            this.state.cocktails.forEach((element2) => (
-                add = (element === element2.cocktail),
-                ( element === element2.cocktail ? allecocktails.push(element2) : null )
+            this.state.Cocktails.forEach((element2) => (
+                add = (element === element2.Cocktail),
+                ( element === element2.Cocktail ? allecocktails.push(element2) : null )
             ))
         ))
-        this.setState({cocktails : allecocktails})
+        this.setState({Cocktails : allecocktails})
     }
     
     offenecocktails = () => {
@@ -107,7 +107,7 @@ render(){
     
                     <p id = "fehlendezutaten">
                         Fehlende Zutaten miteinbeziehen?
-                        <Checkbox beiKlick = {this.fehlende} value="uncontrolled" inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} />
+                        <Checkbox onClick = {this.fehlende} value="uncontrolled" inputProps={{ 'aria-label': 'uncontrolled-checkbox' }} />
                     </p>
     
                     <hr
@@ -118,8 +118,8 @@ render(){
                         }}> 
                     </hr>
                     
-                    <Button beiKlick = {this.offenecocktails}  >
-                        Suche passende cocktails!
+                    <Button onClick = {this.offenecocktails}  >
+                        Suche passende Cocktails!
                     </Button>
     
                 </div>

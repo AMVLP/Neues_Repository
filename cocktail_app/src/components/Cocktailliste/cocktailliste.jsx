@@ -14,21 +14,21 @@ export function cocktailliste(probs) {
 
     probs.map((element) => (
 
-        bild = require('../../Bilder/'+element.cocktail+'.jpg'),
-    
+        bild = require('../../Bilder/'+element.Cocktail+'.jpg'),
+        
         content.push(
             <div>
-                <tr id = {element.cocktail} >
-                    <Link to = {element.cocktail}>
+                <tr id = {element.Cocktail} >
+                    <Link to = {element.Cocktail}>
                         <Button>
                             <td>
-                                <bild src = {bild} width = "200" length = "200" />
+                                <img src = {bild} width = "200px" length = "200px" />
                             </td>
                             <table>
                                 <tr>
                                     <td className = "tabledatacocktailliste">
                                         <h3>
-                                            {element.cocktail}
+                                            {element.Cocktail}
                                         </h3>
                                     </td>
                                 </tr>

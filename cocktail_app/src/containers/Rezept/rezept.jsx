@@ -5,7 +5,7 @@ class Rezept extends React.Component{
     constructor(probs) {
         super(probs)
         this.state =  probs
-        console.log("Rezept", this.state.cocktail)
+        console.log("Rezept", this.state.Cocktail)
     }
 
     render () {

@@ -10,15 +10,15 @@ import './navigationszeile.css';
 
 export function navigationszeile(probs) {
 
-    let cocktails = {cocktails : probs.cocktails}
-    let cosmopolitan = cocktails.cocktails[1]
-    let mai_tai = cocktails.cocktails[0]
-    let mint_julep = cocktails.cocktails[2]
-    let mojito = cocktails.cocktails[3]
-    let wodka_sunrise = cocktails.cocktails[4]
+    let Cocktails = {Cocktails : probs.Cocktails}
+    let cosmopolitan = Cocktails.Cocktails[1]
+    let mai_tai = Cocktails.Cocktails[0]
+    let mint_julep = Cocktails.Cocktails[2]
+    let mojito = Cocktails.Cocktails[3]
+    let wodka_sunrise = Cocktails.Cocktails[4]
     
     console.log("cosmopolitan", cosmopolitan)
-    console.log("all cocktails", cocktails)
+    console.log("all cocktails", Cocktails)
 
     return (
         <div id = "navigationsbreich">
