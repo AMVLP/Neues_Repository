@@ -9,9 +9,10 @@ class Rezeptuebersicht extends React.Component{
         let showEmpty = false
         this.state.Cocktails && this.state.Cocktails.length ? this.showEmpty = false : this.showEmpty = true
         this.text = probs.einkaueinkaufsnachricht
-        this.textzeigen = probs.showText
-        this.prozent = probs.cocktailProzent
+        this.textzeigen = probs.textzeigen
+        this.prozent = probs.cocktailprozent
         console.log("Prozent:", this.prozent)
+        console.log(this.textzeigen)
     }
 
     render () {
@@ -32,7 +33,7 @@ class Rezeptuebersicht extends React.Component{
                     <br />
                     {this.textzeigen ? <div>Für diese Cocktails hast du ..% der Zutaten</div> : null}
                     <br />
-                    {this.textzeigen ? this.percentage.map((element) => <div class = "percent"> Cocktail: {element[0]} | Prozent: {Number((element[1]).toFixed(2))*100} % </div>) : null}
+                    {this.textzeigen ? this.prozent.map((element) => <div class = "percent"> Cocktail: {element[0]} | Prozent: {Number((element[1]).toFixed(2))*100} % </div>) : null}
                     {cocktailliste(this.state.Cocktails)}
                 </div>
                 }

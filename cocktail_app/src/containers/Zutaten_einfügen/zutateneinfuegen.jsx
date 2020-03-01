@@ -49,6 +49,31 @@ class Zutateneinfuegen extends React.Component{
             (tmpwert ? moeglichecocktails.push(element[0]) : null)
         ));
         
+        let prozent_pro_cocktail = []
+        let tmp_num = 0
+        let temp_per = []
+        let bool = false
+        let len = 0
+        let prozent = 0
+
+        cocktailzutaten.forEach((e) => (
+            temp_per = e[1],
+            tmp_num = 0,
+            len = e[1].length,
+            temp_per.forEach((e2) => (
+                bool = aktivezutaten.includes(e2),
+                bool ? tmp_num +=1 : null
+            )),
+            prozent = tmp_num / len,
+            {/*(percentage > 1) ? percentage = 1 : null,*/},
+            prozent_pro_cocktail.push([e[0], prozent])
+        ))
+        console.log("prozent", prozent_pro_cocktail)
+        this.backup.cocktailprozent = prozent_pro_cocktail
+        console.log("backupcoctail", this.backup)
+        
+        
+
         let allecocktails = []
 
         let add = 0
@@ -79,18 +104,19 @@ class Zutateneinfuegen extends React.Component{
         this.setState({zutaten: this.aktiv})
     }
 
-
+    
 render(){
     return (
         <div> 
                 {this.state.ladeRezeptuebersicht ?
                     this.state.alleEinbeziehen ? 
+                    
                         < Rezeptuebersicht {...this.backup}/>
                     :
                         < Rezeptuebersicht {...this.state}/>
-                :
+                    :
     <div id = "zutateneinfuegen">
-    "Erste Seite"
+    
     <h2 id = "FrontPageHead">
                         Welche Zutaten sind da?
                     </h2>
