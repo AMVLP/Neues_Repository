@@ -11,11 +11,11 @@ import './navigationszeile.css';
 export function navigationszeile(probs) {
 
     let Cocktails = {Cocktails : probs.Cocktails}
-    let cosmopolitan = Cocktails.Cocktails[1]
-    let mai_tai = Cocktails.Cocktails[0]
-    let mint_julep = Cocktails.Cocktails[2]
-    let mojito = Cocktails.Cocktails[3]
-    let wodka_sunrise = Cocktails.Cocktails[4]
+    let cosmopolitan = Cocktails.Cocktails[0]
+    let maitai = Cocktails.Cocktails[2]
+    let mintjulep = Cocktails.Cocktails[3]
+    let mojito = Cocktails.Cocktails[1]
+    let wodkasunrise = Cocktails.Cocktails[4]
     
     console.log("cosmopolitan", cosmopolitan)
     console.log("all cocktails", Cocktails)
@@ -58,13 +58,13 @@ export function navigationszeile(probs) {
                 
                 <Route path = "/cosmopolitan" render = {() => <Rezept {...cosmopolitan} />}  />
 
-                <Route path = "/mai_tai"  render = {() => <Rezept {...mai_tai} />} />
+                <Route path = "/mai tai"  render = {() => <Rezept {...maitai} />} />
 
-                <Route path = "/mit_julep" render = {() => <Rezept {...mint_julep} />} />
+                <Route path = "/mint julep" render = {() => <Rezept {...mintjulep} />} />
 
                 <Route path = "/mojito" render = {() => <Rezept {...mojito} />} />
 
-                <Route path = "/wodka_sunrise" render = {() => <Rezept {...wodka_sunrise} />} />
+                <Route path = "/wodka sunrise" render = {() => <Rezept {...wodkasunrise} />} />
 
             </Switch>
 

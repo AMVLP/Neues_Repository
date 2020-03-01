@@ -16,7 +16,7 @@ class Zutateneinfuegen extends React.Component{
         this.aktiv = 0 
         this.backup = {
             Cocktails : probs.Cocktails, 
-            einkaueinkaufsnachricht: "Zeige alle cocktails. Für einige wirst du einkaufen müssen!",
+            einkaueinkaufsnachricht: "Zeige alle Cocktails. Für einige wirst du einkaufen müssen!",
             textzeigen: true
             }
         console.log("all probs in zutateneinfuegen", this.state)

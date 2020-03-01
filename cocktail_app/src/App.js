@@ -19,7 +19,7 @@ class App extends React.Component {
     [ 
       {Zutat:"Wodka", Ausgewählt:false}, 
       {Zutat:"Rum", Ausgewählt:false},
-      {Zutat:"Whsikey", Ausgewählt:false},
+      {Zutat:"Whiskey", Ausgewählt:false},
       {Zutat:"Eiswürfel", Ausgewählt:false},
       {Zutat:"Zucker", Ausgewählt:false},
       {Zutat:"Limette", Ausgewählt:false},
